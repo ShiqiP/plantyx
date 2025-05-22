@@ -20,7 +20,7 @@ export default function Footer() {
                     height={35}
                     className="object-contain"
                 />
-                <nav className="items-center gap-8 flex flex-col md:flex-row ">
+                <nav className="items-center gap-8 text-lg flex flex-col md:flex-row ">
                     {
                         navList.map((item) => {
                             return <a key={item.id}>{item.name}</a>

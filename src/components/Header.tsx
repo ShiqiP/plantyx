@@ -16,7 +16,7 @@ export default function Header() {
                     height={35}
                     className="object-contain"
                 />
-                <nav className="items-center gap-8 hidden md:flex">
+                <nav className="items-center gap-8 hidden text-lg md:flex">
                     {
                         navList.map((item) => {
                             return <a key={item.id}>{item.name}</a>

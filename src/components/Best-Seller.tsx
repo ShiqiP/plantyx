@@ -2,15 +2,15 @@ import Image from "next/image";
 export default function BestSeller({ className }: { className: string }) {
     const list = [
         { id: 0, title: 'Fiddle-leaf flg', price: '110.99', img: 'fiddle-leaf.png' },
-        { id: 1, title: 'Aloe vera', price: '110.99', img: 'Aloe-vera.png' },
+        { id: 1, title: 'Aloe vera', price: '110.99', img: 'aloe-vera.png' },
         { id: 2, title: 'Strelitzia nicolai', price: '110.99', img: 'Strelitzia-nicolai.png' },
         { id: 3, title: 'Ficus microcarpa', price: '110.99', img: 'Ficus-microcarpa.png' },
     ];
     return (
         <div className={`${className} flex h-full w-full flex-col gap-5 md:gap-10 font-[Aeonik]`}>
-            <div className="text-xs md:text-lg font-bold">OUR SHOP</div>
+            <div className="text-xs md:text-2xl font-bold">OUR SHOP</div>
             <div className="flex items-center justify-between md:flex-col md:items-start md:gap-10">
-                <div className="text-xl md:text-4xl font-medium font-[Lora]">
+                <div className="text-xl md:text-5xl font-medium font-[Lora]">
                     <p>Here are the beset seller</p>
                     <p>from our varieties</p>
                 </div>

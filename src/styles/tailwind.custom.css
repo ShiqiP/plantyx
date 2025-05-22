@@ -15,7 +15,7 @@ a {
 
 .button-1 {
     @apply px-8 md:px-12 py-2;
-    @apply font-extralight cursor-pointer rounded-full text-xs md:text-base;
+    @apply font-extralight cursor-pointer rounded-full text-xs md:text-xl;
     background-color: #000;
     font-weight: 600;
     color: #fff;
