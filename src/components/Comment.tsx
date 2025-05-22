@@ -3,8 +3,9 @@ export default function Comment() {
     return (
         <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-10 md:gap-0">
             <div className="flex flex-col gap-3 font-[Aeonik] text-center md:text-start">
-                <div className="font-semibold tracking-[0.1rem]">REVIEWS</div>
-                <div className="font-light text-gray-500 text-[10px] md:text-sm"><p>Shop with confidence by reading customer</p>
+                <div className="font-semibold tracking-[0.1rem] md:text-2xl">REVIEWS</div>
+                <div className="font-light text-gray-800 text-[10px] md:text-lg">
+                    <p>Shop with confidence by reading customer</p>
                     <p>reviews given by individuals who have used</p>
                     <p>Bioomey. Excelient quality and streamlined</p>
                     <p>service are both offered here.</p>
@@ -16,14 +17,14 @@ export default function Comment() {
                                 key={item}
                                 src={`${process.env.NEXT_PUBLIC_BASE_PATH}/Star.svg`}
                                 alt="Star"
-                                width={20}
-                                height={20}
+                                width={25}
+                                height={25}
                             />
                         )}
                     </div>
-                    <div className="font-semibold text-sm">5/5</div>
+                    <div className="font-bold text-sm md:text-lg">5/5</div>
                 </div>
-                <div className="text-xs hidden md:block">2,479 reviews</div>
+                <div className="text-xs hidden md:block md:text-base">2,479 reviews</div>
             </div>
             <div className="flex flex-col gap-10">
                 <div className="min-w-[30vw] md:max-w-[40vw] font-semibold font-[Lora] text-lg md:text-3xl text-center md:text-start">
