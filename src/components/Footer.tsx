@@ -9,7 +9,7 @@ export default function Footer() {
     return (
         <>
             <footer className="bg-[#EDEDED] yPadding xPadding flex gap-8 justify-between items-center mx-auto flex-col md:flex-row">
-                <div className="border-b-3 border-gray-900 pl-1 pb-1">
+                <div className="border-b-3 border-gray-900 pl-1 pb-1 md:hidden">
                     <input value="Your email" className="focus:outline-0"></input>
                     <button className="button-1">Subscribe</button>
                 </div>
