@@ -1,7 +1,8 @@
 {
-  "name": "purebrush",
+  "name": "plantyx",
   "version": "0.1.0",
   "private": true,
+  "homepage": "/plantyx",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",

@@ -1,103 +1,139 @@
 import Image from "next/image";
+import Step from "@/components/Step";
+import BestSeller from "@/components/Best-Seller";
+import Comment from '@/components/Comment'
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <main className="w-full">
+      <section className="flex flex-col h-[50vh] md:min-h-screen avoidHeader box-border">
+        <div className="flex flex-1 justify-between">
+          <div className="flex flex-col gap-6 md:gap-10 pt-10 md:py-20 lPadding ">
+            <div className="font-[Belleza] text-2xl md:text-4xl lg:text-6xl xl:text-8xl">
+              <p>Best house</p>
+              <p>plants varieties.</p>
+            </div>
+            <div>
+              <button className="button-1">Shop now</button>
+            </div>
+            <div className="font-semibold text-[11px] md:text-base">
+              <p>Beautiful living greenery for</p>
+              <p>homes and offices</p>
+            </div>
+            <div className="font-light text-[9px] md:text-base">
+              {`We've been mentioned in the press`}
+            </div>
+            <div className="flex gap-5 md:gap-30 text-base md:text-2xl ">
+              <div className="font-extrabold text-[#7f7f7f]">Bloomberg</div>
+              <div className="font-[lora] font-semibold text-[#818181]">Forbes</div>
+            </div>
+          </div>
+          <div className="relative w-6/9 md:w-5/11 h-full ml-1.5">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH}/banner.png`}
+              alt="banner"
+              fill
+              className="object-cover object-[80%_40%] absolute -z-30"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+      </section>
+      <section className="h-[50vh] md:h-auto avoidHeader">
+        <div className="flex flex-col md:flex-row gap-5 md:gap-50 xPadding text-center md:text-left yPadding">
+          <div className="font-light text-xs md:text-xl">
+            <p>Each houseplant set is handled quickly and safely</p>
+            <p>before being sent to your destination in specially</p>
+            <p> designed insulated packaging.</p>
+          </div>
+          <div className="flex flex-col justify-center items-center gap-2">
+            <div className="font-[lora] font-medium text-lg md:text-3xl">
+              <p>Learn how ve take care of your plant</p>
+              <p>at every stage of its journey from our</p>
+              <p>greenhouse to your home.</p>
+            </div>
+          </div>
+        </div>
+        <div className="flex w-full font-medium md:text-xl justify-center items-center gap-8 cursor-pointer">
+          <div>LEARN MORE</div>
           <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH}/learn-more.svg`}
+            alt="learn-more"
+            width={30}
+            height={30}
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        </div>
+      </section>
+      <section className="h-[60vh] md:h-screen avoidHeader relative">
+        <div className="absolute top-0 w-full h-[30vh] md:h-[50vh]"></div>
+        <div className="absolute bottom-0 w-full h-[30vh] md:h-[50vh] bg-[#EDEDED]"></div>
+        <Step className="xPadding avoidHeader2 bPadding absolute top-0 left-0 right-0 bottom-0" />
+      </section>
+      <section className="avoidHeader h-screen xPadding">
+        <BestSeller className="yPadding" />
+      </section>
+      <section className="xPadding yPadding">
+        <Comment />
+      </section>
+      <section className="basePadding flex h-[50vh] md:h-[90vh] gap-5 md:gap-10">
+        <div className="relative flex-1 md:flex-1">
           <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH}/img10.png`}
+            alt="learn-more"
+            fill
+            className="object-cover absolute"
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        </div>
+        <div className="relative flex-1 md:flex-2">
           <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH}/img11.jpg`}
+            alt="learn-more"
+            fill
+            className="object-cover absolute  md:object-[0%_60%]"
           />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        </div>
+      </section>
+      <section className="xPadding h-[50vh] md:h-screen relative">
+        <div className="relative h-full">
+          <Image
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH}/img12.png`}
+            alt="learn-more"
+            className="object-cover absolute "
+            fill
+          />
+          <div className="absolute top-0 bottom-0 left-0 right-0 px-6 py-3 md:px-30 md:py-20 flex flex-col gap-2 md:gap-5">
+            <div className="font-[Lora] font-semibold text-lg md:text-5xl">
+              <p>Get inspired from</p>
+              <p>our Instagram</p>
+            </div>
+            <div className="font-[Aeoik] text-gray-700  font-extralight text-xs md:text-base">
+              <p>If you use the hashtag #bioomey on Instagram,</p>
+              <p>well spotlight you.</p>
+            </div>
+            <div className="flex w-full font-semibold text-xs md:text-xl items-center gap-1 md:gap-8 cursor-pointer">
+              <div>Check it out</div>
+              <Image
+                className="md:w-7 md:h-7"
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH}/learn-more.svg`}
+                alt="learn-more"
+                width={15}
+                height={15}
+              />
+            </div>
+          </div>
+        </div>
+      </section> 
+      <section className="basePadding">
+        <div className="flex justify-center md:justify-between items-end">
+          <div className="font-[Lora] font-semibold text-lg md:text-5xl">
+            <p>Stay update with special offers,</p>
+            <p> plant-parenting tips, and more. </p>
+          </div>
+          <div className="border-b-3 border-gray-900 pl-1 pb-1 hidden md:block">
+            <input value="Your email" className="focus:outline-0"></input>
+            <button className="button-1">Subscribe</button>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
