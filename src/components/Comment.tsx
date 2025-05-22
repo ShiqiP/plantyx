@@ -62,14 +62,14 @@ export default function Comment() {
             <div className="hidden md:block">
                 <div className="flex gap-3">
                     <Image
-                        className="cursor-pointer"
+                        className="cursor-pointer md:w-[50px] md:h-[50px]"
                         src={`${process.env.NEXT_PUBLIC_BASE_PATH}/left-arrow.svg`}
                         alt="left-arrow"
                         width={30}
                         height={30}
                     />
                     <Image
-                        className="cursor-pointer"
+                        className="cursor-pointer md:w-[50px] md:h-[50px]"
                         src={`${process.env.NEXT_PUBLIC_BASE_PATH}/right-arrow.svg`}
                         alt="right-arrow"
                         width={30}

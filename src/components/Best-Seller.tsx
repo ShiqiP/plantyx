@@ -18,12 +18,12 @@ export default function BestSeller({ className }: { className: string }) {
                     <button className="button-1">See all</button>
                 </div>
             </div>
-            <div className="flex-1 overflow-x-auto overflow-y-hidden whitespace-nowrap">
+            <div className="flex-1 overflow-x-auto overflow-y-hidden whitespace-nowrap text-center">
                 {/* <div className="h-full "> */}
                 {
                     list.map(item => {
                         return (
-                            <div key={item.id} className="h-full inline-block w-[40vh] md:w-[30vh] not-first:ml-7">
+                            <div key={item.id} className="h-full inline-block w-[40vh] md:w-[40vh] not-first:ml-7">
                                 <div className="h-full flex flex-col gap-5">
                                     <div className="flex-1 h-full w-auto relative">
                                         <Image

@@ -8,7 +8,7 @@ export default function Home() {
     <main className="w-full">
       <section className="flex flex-col h-[50vh] md:min-h-screen avoidHeader box-border">
         <div className="flex flex-1 justify-between">
-          <div className="flex flex-col gap-6 md:gap-10 pt-10 md:py-20 lPadding ">
+          <div className="flex flex-col gap-6 md:gap-18 pt-10 md:py-28 lPadding ">
             <div className="font-[Belleza] text-2xl md:text-4xl lg:text-6xl xl:text-8xl">
               <p>Best house</p>
               <p>plants varieties.</p>
@@ -16,14 +16,14 @@ export default function Home() {
             <div>
               <button className="button-1">Shop now</button>
             </div>
-            <div className="font-semibold text-[11px] md:text-base">
+            <div className="font-semibold text-[11px] md:text-3xl">
               <p>Beautiful living greenery for</p>
               <p>homes and offices</p>
             </div>
-            <div className="font-light text-[9px] md:text-base">
+            <div className="text-[9px] md:text-lg">
               {`We've been mentioned in the press`}
             </div>
-            <div className="flex gap-5 md:gap-30 text-base md:text-2xl ">
+            <div className="flex gap-5 md:gap-30 text-base md:text-5xl ">
               <div className="font-extrabold text-[#7f7f7f]">Bloomberg</div>
               <div className="font-[lora] font-semibold text-[#818181]">Forbes</div>
             </div>
@@ -38,8 +38,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="h-[50vh] md:h-auto avoidHeader">
-        <div className="flex flex-col md:flex-row gap-5 md:gap-50 xPadding text-center md:text-left yPadding">
+      <section className="h-auto avoidHeader">
+        {/* <div className="flex flex-col md:flex-row gap-5 md:gap-50 xPadding text-center md:text-left yPadding">
           <div className="font-light text-xs md:text-xl">
             <p>Each houseplant set is handled quickly and safely</p>
             <p>before being sent to your destination in specially</p>
@@ -52,14 +52,15 @@ export default function Home() {
               <p>greenhouse to your home.</p>
             </div>
           </div>
-        </div>
-        <div className="flex w-full font-medium md:text-xl justify-center items-center gap-8 cursor-pointer">
+        </div> */}
+        <div className="flex w-full pb-5 md:pb-0 font-medium md:text-2xl justify-center items-center gap-3 md:gap-8 cursor-pointer">
           <div>LEARN MORE</div>
           <Image
+            className="md:w-10 md:h-10"
             src={`${process.env.NEXT_PUBLIC_BASE_PATH}/learn-more.svg`}
             alt="learn-more"
-            width={30}
-            height={30}
+            width={25}
+            height={25}
           />
         </div>
       </section>
@@ -121,12 +122,12 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section> 
+      </section>
       <section className="basePadding">
         <div className="flex justify-center md:justify-between items-end">
-          <div className="font-[Lora] font-semibold text-lg md:text-5xl">
+          <div className="font-[Lora] font-medium text-lg md:text-5xl">
             <p>Stay update with special offers,</p>
-            <p> plant-parenting tips, and more. </p>
+            <p>plant-parenting tips, and more. </p>
           </div>
           <div className="border-b-3 border-gray-900 pl-1 pb-1 hidden md:block">
             <input value="Your email" className="focus:outline-0"></input>
